@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /admin/login
+Disallow: /admin
+Disallow: /results
+Disallow: /signup
+
+
+Sitemap: https://www.youtube.com/sitemaps/sitemap.xml
