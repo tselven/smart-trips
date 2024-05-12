@@ -35,12 +35,12 @@ use Helpers\Helper;
                 <form method="POST" action="<?php Helper::route('/auth/register') ?>">
                   <div class="row">
                     <div class="form-group col-6">
-                      <label for="frist_name">First Name</label>
-                      <input id="frist_name" type="text" class="form-control" name="frist_name" autofocus>
+                      <label for="first_name">Full Name</label>
+                      <input id="first_name" type="text" class="form-control" name="full_name" autofocus>
                     </div>
                     <div class="form-group col-6">
-                      <label for="last_name">Last Name</label>
-                      <input id="last_name" type="text" class="form-control" name="last_name">
+                      <label for="last_name">User Name</label>
+                      <input id="last_name" type="text" class="form-control" name="username">
                     </div>
                   </div>
                   <div class="form-group">
@@ -61,7 +61,7 @@ use Helpers\Helper;
                     </div>
                     <div class="form-group col-6">
                       <label for="password2" class="d-block">Password Confirmation</label>
-                      <input id="password2" type="password" class="form-control" name="password-confirm">
+                      <input id="password2" type="password" class="form-control" name="con_pass">
                     </div>
                   </div>
                   <div class="form-group">
