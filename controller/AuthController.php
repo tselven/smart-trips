@@ -37,16 +37,16 @@ class Auth extends Controller
 
     function register()
     {
-        $username = $_POST['user'];
+        $username = $_POST['username'];
         $password = $_POST['password'];
-        $name = $_POST['name'];
+        $name = $_POST['full_name'];
         $con_pass = $_POST['con_pass'];
         if (!empty($username) && !empty($password)) {
             if ($password == $con_pass) {
                 $users = new User();
                 $users->insert(
                     [
-                        'ID' => 'U'.$username,
+                        'ID' => 'USR_'.$username,
                         'UserName' => $username,
                         'Name' => $name,
                         'Password' => $password,
