@@ -31,29 +31,9 @@
         </div>
         <button class="apply-filter">Apply Filter</button>
     </div>
-    <div class="main-content" style="padding:0">
-        <div class="tabs-cont">
-            <div class="tabs">
-                <button class="tab-links" onclick="openTab(event, 'tab1')">Tab 1</button>
-                <button class="tab-links" onclick="openTab(event, 'tab2')">Tab 2</button>
-                <button class="tab-links" onclick="openTab(event, 'tab3')">Tab 3</button>
-            </div>
-
-            <div id="tab1" class="tab-content">
-                <h3>Tab 1 Content</h3>
-                <p>This is the content of tab 1.</p>
-            </div>
-
-            <div id="tab2" class="tab-content">
-                <h3>Tab 2 Content</h3>
-                <p>This is the content of tab 2.</p>
-            </div>
-
-            <div id="tab3" class="tab-content">
-                <h3>Tab 3 Content</h3>
-                <p>This is the content of tab 3.</p>
-            </div>
-        </div>
+    <div class="main-content">
+        <h1>Main Content</h1>
+        <!-- Your main content goes here -->
     </div>
 </div>
 

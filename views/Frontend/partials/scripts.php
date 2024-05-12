@@ -7,5 +7,15 @@
 <script src="vendors/fontawesome/all.min.js"></script>
 <script src="src/js/theme.js"></script>
 <script src="src/js/explore.js"></script>
+<?php
+    if(isset($_SESSION['location'])){
+
+    }else{
+        echo `<script>
+        getUserLocation()
+        
+        </script>`;
+    }
+?>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Volkhov:wght@700&amp;display=swap" rel="stylesheet">

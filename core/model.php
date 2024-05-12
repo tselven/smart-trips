@@ -32,10 +32,13 @@ class Model
 
 
     function insert(array $data){
-        $this->query = "INSERT INTO {$this->name} values()";
+        $this->query = "INSERT INTO {$this->name} values(?)";
+        $temp = "";
         foreach($data as $d){
-
+            $temp .= $d.",";
         }
+        $values = trim($temp,",");
+        $this->query = str_replace($this->query,"?",$values);
         $this->run();
     }
 

@@ -1,10 +1,10 @@
 <?php
-
+use Modules\Console;
 $args = $_SERVER['argv'];
 
 // The first argument (index 0) is the script name itself, so we start from index 1
 if ($args[1] == 'serve'){
-    system('php -S localhost:8080');
+    system('php -S smart-trips.com:8080');
 }
 
 

@@ -1,4 +1,203 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY3VzdG9tLmNzcyIsInNvdXJjZXMiOlsiY3VzdG9tLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiJ9 */
+.container {
+    display: flex;
+    width: 100%;
+}
 
-/*# sourceMappingURL=custom.css.map */
+.sidebar {
+    flex: 0 0 200px;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.chat-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.chat-box {
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+}
+
+.bot-message {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.user-input {
+    width: calc(100% - 70px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.send-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.sidebar ul li:hover {
+    background-color: #ddd;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    flex: 0 0 200px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    height:100vh;
+}
+
+/*.main-content {
+    flex: 1;
+    padding: 20px;
+}*/
+
+.chat-container {
+    width:100%;
+    height: 100vh;
+    background-color: red;
+    padding: 20px;
+}
+
+.chat-box {
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+}
+
+.bot-message {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+.user-message {
+    background-color: rgb(104, 104, 253);
+    padding: 10px;
+    color:white;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.user-input {
+    width: calc(100% - 70px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.send-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.sidebar ul li:hover {
+    background-color: #ddd;
+}
+
+/* Style the tab content */
+.tab-content {
+    display: none;
+    padding: 20px;
+  }
+  .tabs{
+    background-color: red;
+  }
+  /* Style the buttons that are used to open the tab content */
+  .tab-links {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .tab-links:hover {
+    background-color: #ddd;
+  }
+  
+  /* Style the active tab */
+  .active {
+    background-color: #ccc;
+  }
+
+  .tabs-cont{
+    background-color: #007bff;
+  }
+  

@@ -13,6 +13,7 @@ class Web extends Controller{
     }
 
     function test(){
-        $this->renderView('Frontend/text');
+        $data['name'] = $_GET['name'];
+        $this->renderView('Frontend/text',$data);
     }
 }

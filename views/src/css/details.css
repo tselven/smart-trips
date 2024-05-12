@@ -1,0 +1,142 @@
+        /* Reset styles */
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f3f3f3;
+            color: #333;
+        }
+        /* Container styles */
+        .custom-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            margin-top:50px;
+        }
+        /* Product details styles */
+        .custom-product-details {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .custom-product-images {
+            position: relative;
+            flex: 1;
+            max-width: 50%;
+            margin-right: 20px;
+        }
+        .custom-product-images .swiper-container {
+            max-height: 400px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .custom-product-images .swiper-slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .custom-product-images .swiper-slide img:hover {
+            transform: scale(1.05);
+        }
+        .custom-swiper-button-prev,
+        .custom-swiper-button-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+        }
+        .custom-swiper-button-prev:hover,
+        .custom-swiper-button-next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .custom-swiper-button-prev {
+            left: 10px;
+        }
+        .custom-swiper-button-next {
+            right: 10px;
+        }
+        .custom-product-info {
+            flex: 1;
+            max-width: 50%;
+        }
+        .custom-product-title {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .custom-product-price {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+        .custom-product-description {
+            margin-bottom: 20px;
+            color: #666;
+        }
+        .custom-buy-now-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .custom-buy-now-button:hover {
+            background-color: #0056b3;
+        }
+        /* Related products styles */
+        .custom-related-products {
+            margin-top: 40px;
+        }
+        .custom-related-products h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .custom-related-product {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border: 1px solid #eaeaea;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #fff;
+        }
+        .custom-related-product img {
+            max-width: 100px;
+            margin-right: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .custom-related-product img:hover {
+            transform: scale(1.05);
+        }
+        .custom-related-product-info {
+            flex: 1;
+        }
+        .custom-related-product-title {
+            font-size: 20px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .custom-related-product-price {
+            font-size: 18px;
+            color: #007bff;
+        }

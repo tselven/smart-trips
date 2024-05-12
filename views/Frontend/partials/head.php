@@ -36,15 +36,23 @@
     <!--    Stylesheets-->
     <!-- ===============================================-->
     <link href="src/css/theme.css" rel="stylesheet" />
+    <link href="src/css/custom.css" rel="stylesheet" />
+    <script src="src/js/jquery.js"></script>
+    <script src="src/js/custom.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
     <?php
-        if($title == "Explore | Smart Trips" || $title == "Info Base | Smart Trips"){
+        if($title == "Explore | Smart Trips" || $title == "Info Base | Smart Trips" || $title == "Hotels | Smart Trips"){
             $url = Helper::url('/src/css/explore.css');
             echo "<link href='{$url}' rel='stylesheet' />";
         }
         if($title == "Smart Planner | Smart Trips"){
             $url = Helper::url('/src/css/smart.css');
             echo "<link href='{$url}' rel='stylesheet' />";
+        }
+        if($title == "Details | Smart Trips"){
+            $url = Helper::url('/src/css/details.css');
+            echo "<link href='{$url}' rel='stylesheet' />";
+            echo "<link rel='stylesheet' href='https://unpkg.com/swiper/swiper-bundle.min.css'>";
         }
     ?>
     <style>
@@ -61,9 +69,9 @@
             <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base align-items-lg-center align-items-start">
                     <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium text-white" aria-current="page" href="<?php echo Helper::route('/explore'); ?>">Explore</a></li>
-                    <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium text-white" aria-current="page" href="<?php echo Helper::route('/planner'); ?>">Travel</a></li>
+                    <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium text-white" aria-current="page" href="<?php echo Helper::route('/hotels'); ?>">Book Hotel</a></li>
                     <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium text-white" aria-current="page" href="<?php echo Helper::route('/info-base'); ?>">Info Base</a></li>
-                    <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium text-white" aria-current="page" href="<?php echo Helper::route('/smart-planner'); ?>">Smart Planer</a></li>
+                    <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium text-white" aria-current="page" href="<?php echo Helper::route('/guides'); ?>">Hire Guides</a></li>
                     <?php
                     if (isset($_SESSION['user'])) {
                         $dashboard = Helper::url("/dashboard").'/'.$_SESSION['user'];

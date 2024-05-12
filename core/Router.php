@@ -18,6 +18,9 @@ class Router
     protected $status;
     function route($uri)
     {
+        if(str_contains($uri,'?')){
+            $uri = explode('?',$uri)[0];
+        }
         if (isset($this->routes[$uri])) {
             $str = $this->routes[$uri];
             $this->status = true;

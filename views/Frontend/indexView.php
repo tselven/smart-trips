@@ -11,7 +11,8 @@
           <div class="col-md-5 col-lg-6 order-0 order-md-1" style="display:flex;flex-direction:column;justify-content:space-around;align-items:center;gap:10px;">
             <?php
 
-            use Modules\Controller;
+use Helpers\Helper;
+use Modules\Controller;
 
             if (isset($places) && !empty($places)) {
               foreach ($places as $place) {
@@ -27,7 +28,7 @@
 
           </div>
           <div class="col-md-7 col-lg-6 text-md-start text-center py-6">
-            <form class="row g-3 align-items-center w-lg-75">
+            <form action="<?php Helper::route('/explore') ?>" method="GET" class="row g-3 align-items-center w-lg-75">
               <div class="col-sm rounded">
                 <div class="input-group-icon">
                   <input class="form-control" type="text" name='query' placeholder="Explore Now" aria-label="email" />

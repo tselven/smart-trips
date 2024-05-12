@@ -8,6 +8,7 @@ require_once "./core/helpers.php";
 require_once "./core/Router.php";
 require_once "./core/view/view.php";
 require_once "./core/view/components/button.php";
+require_once "./core/view/components/text.php";
 require_once "./models/place.php";
 require_once "./models/user.php";
 /**

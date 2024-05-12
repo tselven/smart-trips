@@ -6,7 +6,11 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title><?php echo $title ?></title>
+  <title><?php
+
+use Helpers\Helper;
+
+ echo $title ?></title>
   <!-- General CSS Files -->
   <link rel="stylesheet" href="src/css/app.min.css">
   <link rel="stylesheet" href="src/css/selectric.css">
@@ -28,7 +32,7 @@
                 <h4>Register</h4>
               </div>
               <div class="card-body">
-                <form method="POST">
+                <form method="POST" action="<?php Helper::route('/auth/register') ?>">
                   <div class="row">
                     <div class="form-group col-6">
                       <label for="frist_name">First Name</label>

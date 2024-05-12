@@ -10,7 +10,7 @@ class Authenticate{
 
     }
     protected function isPro($user){
-
+        
     }
     protected function isAdmin($user){
 

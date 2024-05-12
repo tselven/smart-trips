@@ -25,7 +25,37 @@ async function get(url) {
     return res;
 }
 
-/* var users = get('http://localhost:8080/users');
-users.then(function(result) {
-    console.log(result);
-}) */
+// Set session variable
+function setSessionVariable(key, value) {
+    sessionStorage.setItem(key, JSON.stringify(value));
+}
+
+// Get session variable
+function getSessionVariable(key) {
+    const value = sessionStorage.getItem(key);
+    return value ? JSON.parse(value) : null;
+}
+
+function getUserLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+    } else {
+        console.log("Geolocation is not supported by this browser.");
+    }
+}
+
+
+function successCallback(position) {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    setSessionVariable("location",{"latitude":latitude,"longitude":longitude});
+    console.log("Latitude:", latitude);
+    console.log("Longitude:", longitude);
+    // You can pass latitude and longitude to other functions for further processing
+}
+
+function errorCallback(error) {
+    console.error("Error getting user's location:", error.message);
+}
+
+getUserLocation();

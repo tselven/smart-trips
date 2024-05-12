@@ -13,4 +13,16 @@ class Console {
     public function calc(){
 
     }
+
+    public function makeController(){
+
+    }
+
+    public function makeModal(){
+
+    }
+
+    public function migrate(){
+        
+    }
 }

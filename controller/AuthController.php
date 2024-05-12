@@ -46,13 +46,14 @@ class Auth extends Controller
                 $users = new User();
                 $users->insert(
                     [
+                        'ID' => 'U'.$username,
                         'UserName' => $username,
-                        'Password' => $password
+                        'Name' => $name,
+                        'Password' => $password,
+                        'UserType' => 'password'
                     ]
                 );
             }
-            $users = new User();
-            $users->insert([]);
         }
     }
 }

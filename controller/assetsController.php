@@ -10,6 +10,8 @@ class assets extends Controller
     public $types = [
         "css" => "text/css",
         "js" => "application/javascript",
+        "txt" => "text",
+        "xml" => "application/xml"
     ];
     function Video()
     {
