@@ -32,6 +32,7 @@ class Media
      */
     private $img_type = [
         "jpg"  => "image/jpeg",
+        "jfif" => "image/jpeg",
         "png"  => "image/png",
         "gif"  => "image/gif",
         "svg"  => "image/svg+xml",

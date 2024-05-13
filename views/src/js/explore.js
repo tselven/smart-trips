@@ -1,5 +1,8 @@
 let root = window.location.origin;
-var res = get(`${root}/places`);
+var long,lat = getUserLocation();
+//var res = get(`${root}/places?long=${long}&lat=${lat}`);
+var res = get('http://localhost:8080/places?long=80.020263&lat=9.686913');
+
 res.then(function (data) {
     data.forEach(function (info) {
         var short = info.Description.substring(0,50);
@@ -7,12 +10,12 @@ res.then(function (data) {
         var template = `
         <div class="col-md-12 col-lg-4 mb-4 mb-lg-0">
         <div class="card">
-          <img src="http://localhost:8080/image/nallur.jpg"
-            class="card-img-top" alt="Laptop" />
+          <img src="http://localhost:8080/image/${info.Image}"
+            class="card-img-top" alt="${info.Name}" />
           <div class="card-body">
             <div class="d-flex justify-content-between">
               <p class="small"><a href="#!" class="text-muted">Distance</a></p>
-              <p class="small text-danger"><s>$1099</s></p>
+              <p class="small text-danger">${info.distance} KM</p>
             </div>
 
             <div class="d-flex justify-content-between mb-3">
@@ -47,7 +50,7 @@ $('.apply-filter').click(() => {
             var template = `
             <div class="col-md-12 col-lg-4 mb-4 my-3 mb-lg-0">
         <div class="card">
-          <img src="http://localhost:8080/image/nallur.jpg"
+          <img src="http://localhost:8080/image/places/nallur.jpg"
             class="card-img-top" alt="Laptop" />
           <div class="card-body">
             <div class="d-flex justify-content-between">

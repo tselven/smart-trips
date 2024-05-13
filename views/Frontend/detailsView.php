@@ -25,10 +25,12 @@
                     </div>
                 </div>
             </div>
+            
             <div class="custom-product-info">
-                <h1 class="custom-product-title">Product Title</h1>
-                <p class="custom-product-price">$99.99</p>
-                <p class="custom-product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fermentum, lorem at sodales fermentum, nulla mi dignissim mauris, vel tristique justo risus ac ligula.</p>
+                <h1 class="custom-product-title"><?php echo $name ?></h1>
+                <b><?php  ?></b>
+                <p class="custom-product-price"><?php echo $price  ?></p>
+                <p class="custom-product-description"><?php echo $description ?></p>
                 <a href="#" class="custom-buy-now-button">Buy Now</a>
             </div>
         </div>

@@ -51,11 +51,12 @@ function successCallback(position) {
     setSessionVariable("location",{"latitude":latitude,"longitude":longitude});
     console.log("Latitude:", latitude);
     console.log("Longitude:", longitude);
+    return [longitude, latitude];
     // You can pass latitude and longitude to other functions for further processing
 }
 
 function errorCallback(error) {
-    console.error("Error getting user's location:", error.message);
+    console.log("Error getting user's location:", error.message);
 }
 
 getUserLocation();

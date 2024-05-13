@@ -9,7 +9,7 @@ class Admin extends Controller{
             "name"=> "Thamilselven",
         ];
         $view = "Auth/Login";
-        $this->renderView($view, $data);
+        $this->View($view, $data);
     }
 
     function register(){
@@ -17,7 +17,7 @@ class Admin extends Controller{
             "title" => "Register | Smart Trips",
         ];
         $view = "Auth/register";
-        $this->renderView($view, $data);
+        $this->View($view, $data);
     }
 }
 ?>

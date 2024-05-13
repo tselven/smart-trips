@@ -1,5 +1,6 @@
 <?php
 namespace Modules;
+use Modal\User;
 
 class Authenticate{
     protected function login($username, $password){
@@ -15,8 +16,10 @@ class Authenticate{
     protected function isAdmin($user){
 
     }
-    protected function getUser($user){
-
+    public function getUser($user){
+        $users = new User();
+        $type = $users->select('User_Type')->where("username = '{$user}' ")->get();
+        return $type[0]['User_Type'];
     }
     protected function sendOTP($user){
         
