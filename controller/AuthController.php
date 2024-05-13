@@ -39,7 +39,7 @@ class Auth extends Controller
     {
         $username = $_POST['username'];
         $password = $_POST['password'];
-        $name = $_POST['full_name'];
+        $type = $_POST['user_type'];
         $con_pass = $_POST['con_pass'];
         if (!empty($username) && !empty($password)) {
             if ($password == $con_pass) {
@@ -48,9 +48,8 @@ class Auth extends Controller
                     [
                         'ID' => 'USR_'.$username,
                         'UserName' => $username,
-                        'Name' => $name,
                         'Password' => $password,
-                        'UserType' => 'password'
+                        'UserType' => $type
                     ]
                 );
             }

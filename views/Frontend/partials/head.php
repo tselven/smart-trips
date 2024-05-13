@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +11,6 @@
     <!-- ===============================================-->
     <title><?php echo $title; ?></title>
     <?php
-
     use Helpers\Helper;
     ?>
 
@@ -35,18 +33,28 @@
     <!-- ===============================================-->
     <!--    Stylesheets-->
     <!-- ===============================================-->
-    <link href="src/css/theme.css" rel="stylesheet" />
-    <link href="src/css/custom.css" rel="stylesheet" />
-    <script src="src/js/jquery.js"></script>
-    <script src="src/js/custom.js"></script>
+    <link href="<?php Helper::route('/src/css/theme.css')?>" rel="stylesheet" />
+    <!--<link href="<?php //Helper::route('/src/css/custom.css') ?>" rel="stylesheet" />-->
+    <script src="<?php Helper::route('/src/js/jquery.js') ?>"></script>
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
     <?php
         if($title == "Explore | Smart Trips" || $title == "Info Base | Smart Trips" || $title == "Hotels | Smart Trips"){
             $url = Helper::url('/src/css/explore.css');
             echo "<link href='{$url}' rel='stylesheet' />";
         }
+        if($title == "Info Base | Smart Trips"){
+            $css = Helper::url('/src/css/custom.css');
+            $js = Helper::url('/src/js/custom.js');
+            echo "<link href='{$css}' rel='stylesheet' />";
+            echo "<script src='{$js}') ?></script>";
+        }
         if($title == "Smart Planner | Smart Trips"){
             $url = Helper::url('/src/css/smart.css');
+            echo "<link href='{$url}' rel='stylesheet' />";
+        }
+        if($title == "Guides | Smart Trips"){
+            $url = Helper::url('/src/css/guides.css');
             echo "<link href='{$url}' rel='stylesheet' />";
         }
         if($title == "Details | Smart Trips"){
@@ -64,7 +72,7 @@
 
 <body>
     <nav class="bg-primary navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container"><a class="navbar-brand" href="<?php echo Helper::route('/'); ?>"><img src="image/logo.svg" height="34" alt="logo" /></a>
+        <div class="container"><a class="navbar-brand" href="<?php echo Helper::route('/'); ?>"><img src="<?php Helper::route('/image/logo.svg') ?>" height="34" alt="logo" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
             <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base align-items-lg-center align-items-start">

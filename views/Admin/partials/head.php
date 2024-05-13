@@ -3,8 +3,10 @@
 <!-- index.html  21 Nov 2019 03:44:50 GMT -->
 <?php use Helpers\Helper; ?>
 <?php
+    use Modules\Authenticate;
   if(isset($_SESSION['user'])){
-
+    $auth = new Authenticate();
+    $type = $auth->getUser($_SESSION['user']);
   }
   else{
     $login = Helper::url('/login');
@@ -23,6 +25,12 @@
   <link rel="stylesheet" href="<?php Helper::route('/src/css/components.css') ?>">
   <!-- Custom style CSS -->
   <link rel='shortcut icon' type='image/x-icon' href='image/favicon.ico' />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+  <style>
+    table{
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>

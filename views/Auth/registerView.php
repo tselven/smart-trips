@@ -49,6 +49,16 @@ use Helpers\Helper;
                     <div class="invalid-feedback">
                     </div>
                   </div>
+                  <div class="form-group">
+                    <l for="user_type">User Type<l>
+                    <select name="user_type" id="user_type" class="form-control selectric">
+                      <option>Traveler</option>
+                      <option>Guide</option>
+                      <option>Partners / Organizations</option>
+                    </select>
+                    <div class="invalid-feedback">
+                    </div>
+                  </div>
                   <div class="row">
                     <div class="form-group col-6">
                       <label for="password" class="d-block">Password</label>

@@ -34,7 +34,6 @@ use Helpers\Helper;
     <div class="main-content">
         <div class="container py-5">
             <div class="row listing">
-
             </div>
         </div>
     </div>

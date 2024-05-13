@@ -9,7 +9,7 @@ class Home extends Controller{
             "title" => "Home",
             "places" => $places
         ];
-        $this->renderView('Frontend/index',$data);
+        $this->View('Frontend/index',$data);
     }
 
     function infoBase(){
@@ -19,7 +19,7 @@ class Home extends Controller{
             "title" => "Info Base | Smart Trips",
             "places" => $places
         ];
-        $this->renderView('Frontend/infoBase',$data);
+        $this->View('Frontend/infoBase',$data);
     }
 
     function guides(){
@@ -29,7 +29,7 @@ class Home extends Controller{
             "title" => "Guides | Smart Trips",
             "places" => $places
         ];
-        $this->renderView('Frontend/guides',$data);
+        $this->View('Frontend/guides',$data);
     }
     function hotels(){
         $place = new place();
@@ -38,7 +38,7 @@ class Home extends Controller{
             "title" => "Hotels | Smart Trips",
             "places" => $places
         ];
-        $this->renderView('Frontend/hotels',$data);
+        $this->View('Frontend/hotels',$data);
     }
     function pay(){
         $place = new place();
@@ -47,7 +47,7 @@ class Home extends Controller{
             "title" => "Hotels | Smart Trips",
             "places" => $places
         ];
-        $this->renderView('Frontend/payment');
+        $this->View('Frontend/payment');
     }
     function details(){
         $place = new place();
@@ -56,7 +56,7 @@ class Home extends Controller{
             "title" => "Details | Smart Trips",
             "places" => $places
         ];
-        $this->renderView('Frontend/details',$data);
+        $this->View('Frontend/details',$data);
     }
     function dashboard(){
         $place = new place();
@@ -65,7 +65,7 @@ class Home extends Controller{
             "title" => "Dashboard",
             "places" => $places
         ];
-        $this->renderView('Admin/index',$data);
+        $this->View('Admin/index',$data);
     }
     function chat(){
         $place = new place();
@@ -74,6 +74,6 @@ class Home extends Controller{
             "title" => "Chat Bot",
             "places" => $places
         ];
-        $this->renderView('Frontend/chat',$data);
+        $this->View('Frontend/chat',$data);
     }
 }

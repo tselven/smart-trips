@@ -9,7 +9,7 @@ use Helpers\Helper; ?>
     <div class="col-12">
       <div class="card">
         <div class="card-header" style="display:flex;justify-content:space-between">
-          <h4><a href="<?php Helper::route('/dashboard/add/users') ?>"><b class="btn btn-success"><i class="bi bi-star"></i>&nbsp;Add Users</b></a></h4>
+          <h4><b class="btn btn-success"><i class="bi bi-plus"></i>Add Partner</b></h4>
           <div class="card-header-form">
             <form>
               <div class="input-group">
@@ -32,11 +32,11 @@ use Helpers\Helper; ?>
                   </div>
                 </th>
                 <th>Name</th>
-                <th>Username</th>
-                <th>User Type</th>
+                <th>Category</th>
+                <th>Address</th>
                 <th>Joined Date</th>
-                <th>Last Trip</th>
-                <th>Royalty</th>
+                <th>Since</th>
+                <th>Employees</th>
                 <th>Action</th>
               </tr>
               <?php
@@ -50,9 +50,13 @@ use Helpers\Helper; ?>
                               <label for="checkbox-1" class="custom-control-label">&nbsp;</label>
                             </div>
                           </td>';
-                  echo "<td>{$user['UserName']}</td>";
-                  echo "<td>{$user['Password']}</td>";
-                  echo "<td>{$user['User_Type']}</td>";
+                  echo "<td>{$user['p_name']}</td>";
+                  echo "<td>{$user['type']}</td>";
+                  echo "<td>{$user['p_address']}</td>";
+                  echo "<td>{$user['p_address']}</td>";
+                  echo "<td>{$user['since']}</td>";
+                  echo "<td>{$user['employees']}</td>";
+                  echo '<td><a href="" class="btn btn-outline-primary">See More</a></td>';
                   echo "</tr>";
                 }
               }

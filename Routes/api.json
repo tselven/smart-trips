@@ -1,0 +1,13 @@
+{
+    "/users"               :     "users@GET",
+    "/users/del/|1"        :     "users@DELETE",  
+    "/places"              :     "places@GET",
+    "/places/|1"           :     "places@GETBY",
+    "/places/del/|1"       :     "places@DELETE",    
+    "/partners"            :     "Partners@GET",
+    "/api/guides"          :     "guides@GET",
+    "/auth/login"          :     "Auth@login",
+    "/auth/logout"         :     "Auth@logout",
+    "/auth/register"       :     "Auth@register",
+    "/articles"            :     "Articles@GET"
+}

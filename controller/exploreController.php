@@ -12,6 +12,6 @@ function index(){
             "title" => "Explore | Smart Trips",
             //"places" => $places
         ];
-        $this->renderView('Frontend/explore',$data);
+        $this->View('Frontend/explore',$data);
     }
 }

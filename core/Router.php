@@ -1,7 +1,6 @@
 <?php
 
 namespace Modules;
-
 use Config\Config;
 use Modules\Controller;
 
@@ -46,9 +45,9 @@ class Router
             Controller::view('404');
         }
     }
-    public function load()
+    public function load($file)
     {
-        $path = "routes.json";
+        $path = "Routes/{$file}";
         $cont = file_get_contents($path);
         $info = json_decode($cont, true);
         foreach ($info as $key => $value) {

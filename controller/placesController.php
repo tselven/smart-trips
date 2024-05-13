@@ -9,6 +9,13 @@ class Places extends Controller
     // Get all items
     function GET()
     {
+        if(isset($_GET['lat']) && $_GET['long']){
+            $lat = $_GET['lat'];
+            $long = $_GET['long'];
+            $places =  new Place();
+            $res = $places->getClosest($long,$lat);
+            return $this->JSON($res);
+        }
         if (isset($_POST['place'])) {
             $place = $_POST['place'];
             $places =  new Place();

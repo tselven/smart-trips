@@ -33,12 +33,12 @@ class Model
 
     function insert(array $data){
         $this->query = "INSERT INTO {$this->name} values(?)";
-        $temp = "";
+        $temp = null;
         foreach($data as $d){
-            $temp .= $d.",";
+            $temp .= "'{$d}',";
         }
         $values = trim($temp,",");
-        $this->query = str_replace($this->query,"?",$values);
+        $this->query = str_replace("?",$values,$this->query);
         $this->run();
     }
 
@@ -88,6 +88,20 @@ class Model
         return $this;
     }
 
+    function getClosest($long,$lat,$distance = 10)
+    {
+        $this->query = "SELECT 
+        *,
+        (6371 * acos(cos(radians($lat)) * cos(radians(latitude)) * cos(radians(longitude) - radians($long)) + sin(radians($lat)) * sin(radians(latitude)))) AS distance
+    FROM 
+        {$this->name}
+    HAVING 
+        distance <= $distance
+    ORDER BY 
+        distance;";
+
+        return $this->get();
+    }
     
 
     /**

@@ -9,11 +9,11 @@ class Web extends Controller{
             "name"=> $name
         ];
         $view = "Web/index";
-        $this->renderView($view, $data);
+        $this->View($view, $data);
     }
 
     function test(){
         $data['name'] = $_GET['name'];
-        $this->renderView('Frontend/text',$data);
+        $this->View('Frontend/text',$data);
     }
 }
