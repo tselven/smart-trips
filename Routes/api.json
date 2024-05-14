@@ -1,6 +1,8 @@
 {
     "/users"               :     "users@GET",
     "/users/del/|1"        :     "users@DELETE",  
+    "/users/edit/|1"       :     "users@PUT",
+    "/users/add"           :     "users@POST",
     "/places"              :     "places@GET",
     "/places/|1"           :     "places@GETBY",
     "/places/del/|1"       :     "places@DELETE",    

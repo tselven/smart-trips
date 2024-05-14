@@ -1,6 +1,9 @@
 <?php
 use Modules\Controller;
 use Modal\Place;
+use Modal\Articles;
+use Modal\Partners;
+
 class Home extends Controller{
     function index(){
         $place = new place();
@@ -13,11 +16,11 @@ class Home extends Controller{
     }
 
     function infoBase(){
-        $place = new place();
-        $places = $place->getAll();
+        $article = new Articles();
+        $articles = $article->getAll();
         $data = [
             "title" => "Info Base | Smart Trips",
-            "places" => $places
+            "articles" => $articles
         ];
         $this->View('Frontend/infoBase',$data);
     }
@@ -32,7 +35,7 @@ class Home extends Controller{
         $this->View('Frontend/guides',$data);
     }
     function hotels(){
-        $place = new place();
+        $place = new Partners();
         $places = $place->getAll();
         $data = [
             "title" => "Hotels | Smart Trips",

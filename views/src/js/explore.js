@@ -1,8 +1,27 @@
-let root = window.location.origin;
-var long,lat = getUserLocation();
-//var res = get(`${root}/places?long=${long}&lat=${lat}`);
-var res = get('http://localhost:8080/places?long=80.020263&lat=9.686913');
+function getUserLocation() {
+  const latitude = position.coords.latitude;
+  const longitude = position.coords.longitude;
+  return latitude + "," + longitude;
+  if (navigator.geolocation) {
+      try{
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+          return "hi";
+      }
+      catch{
 
+      }
+      //navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+  } else {
+      console.log("Geolocation is not supported by this browser.");
+  }
+}
+let root = window.location.origin;
+var {long,lat} = getUserLocation();
+console.log("Geolocation: " + long + " " + latitude );
+url = `http://localhost:8080/places?long=${long}&lat=${lat}`;
+var res = get(url);
+console.log(url);
 res.then(function (data) {
     data.forEach(function (info) {
         var short = info.Description.substring(0,50);

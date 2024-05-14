@@ -27,18 +27,26 @@ async function get(url) {
 
 // Set session variable
 function setSessionVariable(key, value) {
-    sessionStorage.setItem(key, JSON.stringify(value));
+    localStorage.setItem(key, value);
 }
 
 // Get session variable
 function getSessionVariable(key) {
-    const value = sessionStorage.getItem(key);
+    const value = localStorage.getItem(key);
     return value ? JSON.parse(value) : null;
 }
 
 function getUserLocation() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+        try{
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            return "hi";
+        }
+        catch{
+
+        }
+        //navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
     } else {
         console.log("Geolocation is not supported by this browser.");
     }
@@ -48,7 +56,8 @@ function getUserLocation() {
 function successCallback(position) {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
-    setSessionVariable("location",{"latitude":latitude,"longitude":longitude});
+    setSessionVariable("long",longitude);
+    setSessionVariable("lat",latitude);
     console.log("Latitude:", latitude);
     console.log("Longitude:", longitude);
     return [longitude, latitude];

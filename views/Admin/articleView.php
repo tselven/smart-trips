@@ -60,6 +60,8 @@ use Helpers\Helper; ?>
                   echo '<td><a href="#" class="btn btn-outline-danger">Delete</a></td>';
                   echo "</tr>";
                 }
+              }else{
+                echo "<tr><td colspan='8'><h4>You have no articles</h4></td></tr>";
               }
               ?>
             </table>

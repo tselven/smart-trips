@@ -19,7 +19,8 @@ class Users extends Controller{
 
     //TODO: Update Items.
     function PUT(){
-
+        $user = explode('/',$_SERVER['REQUEST_URI'])[3];
+        
     }
 
     //TODO: Delete Items.

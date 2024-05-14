@@ -3,7 +3,8 @@
 use Modal\User;
 use Modal\Partners;
 use Modal\Articles;
-use Modal\Guides;;
+use Modal\Guides;
+use Modules\Authenticate;
 use Modules\Controller;
 
 class Dashboard extends Controller{
@@ -51,8 +52,16 @@ class Dashboard extends Controller{
     }
 
     function articles(){
+        $author = $_SESSION['user'];
+        $auth = new Authenticate();
+        $usr_type = $auth->getUser($author);
         $article = new Articles();
-        $articles = $article->getAll();
+        if($usr_type = "Admin"){
+            $articles = $article->getAll();
+        }
+        else{
+            $articles = $article->select('*')->where("author = '{$author}'")->get();
+        }
         $data = [
             "title" => "Articles",
             "articles" => $articles
@@ -61,11 +70,11 @@ class Dashboard extends Controller{
     }
 
     function profile(){
-        //$article = new Articles();
-        //$articles = $article->getAll();
+        $obj = new User();
+        $user = $obj->select('*')->where("username = '{$_SESSION['user']}'")->get();
         $data = [
             "title" => "Profile",
-            //"articles" => $articles
+            "user" => $user
         ];
         $this->View('Admin/profile',$data);
     }

@@ -1,4 +1,5 @@
       <?php
+
       use Helpers\Helper; ?>
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
@@ -13,23 +14,46 @@
                                 } ?>">
               <a href="index.html" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
             </li>
-            <li class="<?php if ($title == "Users") {
-                          echo "active";
-                        } ?>"><a href="<?php Helper::route('/dashboard/users') ?>" class="nav-link"><i data-feather="briefcase"></i><span>Users</span></a></li>
-            <li class="<?php if ($title == "Guides") {
-                          echo "active";
-                        } ?>"><a href="<?php Helper::route('/dashboard/guides') ?>" class="nav-link"><i data-feather="command"></i><span>Tour Guides</span></a></li>
-            <li class="<?php if ($title == "Partners") {
-                          echo "active";
-                        } ?>">
-              <a href="<?php Helper::route('/dashboard/partners') ?>" class="nav-link"><i data-feather="mail"></i><span>Partners</span></a>
-            </li>
+            <?php
+            if ($type == "Admin") {
+              $url = Helper::url('/dashboard/users');
+              $active = ($title == "Users") ? "active" : "disabled";
+              $temp = <<<EOT
+                <li class="{$active}"><a href="{$url}" class="nav-link"><i data-feather="briefcase"></i><span>Users</span></a></li>
+                EOT;
+              echo $temp;
+            }
+            ?>
+
+            <?php
+            if ($type == "Admin") {
+              $url = Helper::url('/dashboard/guides');
+              $active = ($title == "Guides") ? "active" : "disabled";
+              $temp = <<<EOT
+                <li class="{$active}"><a href="{$url}" class="nav-link"><i data-feather="command"></i><span>Tour Guides</span></a></li>
+                EOT;
+              echo $temp;
+            }
+            ?>
+
+            <?php
+            if ($type == "Admin") {
+              $url = Helper::url('/dashboard/partners');
+              $active = ($title == "Partners") ? "active" : "disabled";
+              $temp = <<<EOT
+                <li class="{$active}"><a href="{$url}" class="nav-link"><i data-feather="mail"></i><span>Partners</span></a></li>
+                EOT;
+              echo $temp;
+            }
+            ?>
+
             <li class="dropdown <?php if ($title == "Articles") {
                                   echo "active";
                                 } ?>">
-              <a href="<?php Helper::route('/dashboard/articles') ?>" class="nav-link"><i data-feather="copy"></i><span>Articles</span></a></li>
+              <a href="<?php Helper::route('/dashboard/articles') ?>" class="nav-link"><i data-feather="copy"></i><span>Articles</span></a>
+            </li>
             <?php
-            if($type == "Guide"){
+            if ($type == "Guide") {
               $temp = <<<EOT
               <li class="dropdown">
               <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="shopping-bag"></i><span>Web Manager</span></a>
@@ -40,12 +64,11 @@
               </ul>
             </li>
             EOT;
-
-            echo $temp;
+              echo $temp;
             }
             ?>
-            <?php 
-            if($type == "Admin"){
+            <?php
+            if ($type == "Admin") {
               $temp = <<<EOT
               <li><a class="nav-link" href="blank.html"><i data-feather="file"></i><span>Site Settings</span></a></li>
               EOT;

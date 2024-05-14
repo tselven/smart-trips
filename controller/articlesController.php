@@ -7,4 +7,5 @@ class Articles extends Controller{
         $data = $article->getAll();
         return $this->JSON($data);
     }
+    
 }

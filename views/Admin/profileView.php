@@ -14,7 +14,7 @@ use Helpers\Helper; ?>
                       <img alt="image" src="assets/img/users/user-1.png" class="rounded-circle author-box-picture">
                       <div class="clearfix"></div>
                       <div class="author-box-name">
-                        <a href="#">Sarah Smith</a>
+                        <a href="#"><?= $user[0]['UserName']; ?></a>
                       </div>
                       <div class="author-box-job">Web Developer</div>
                     </div>
@@ -218,7 +218,7 @@ use Helpers\Helper; ?>
                         </ul>
                       </div>
                       <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="profile-tab2">
-                        <form method="post" class="needs-validation">
+                        <form method="post" action="<?php Helper::route("/user/edit/{$user[0]['ID']}") ?>" class="needs-validation">
                           <div class="card-header">
                             <h4>Edit Profile</h4>
                           </div>

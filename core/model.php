@@ -41,7 +41,15 @@ class Model
         $this->query = str_replace("?",$values,$this->query);
         $this->run();
     }
-
+    function update(array $data,$id){
+        $this->query = "UPDATE {$this->name} SET ? WHERE {$this->uni} = '{$id}'";
+        $temp = null;
+        foreach($data as $key => $value){
+            $temp .= "{$key} = '{$value}'";
+        }
+        $this->query = str_replace("?",$temp,$this->query);
+        $this->run();
+    }
     function select($columns)
     {
         $this->query = "SELECT $columns FROM " . $this->name;

@@ -32,7 +32,26 @@
         <button class="apply-filter">Apply Filter</button>
     </div>
     <div class="main-content">
-        <h1>Main Content</h1>
+        <?php
+
+        use Config\Config;
+
+        if (!empty($places)) {
+            foreach ($places as $place) {
+                echo '<div class="col-lg-4 col-md-6 col-sm-12">';
+                echo '<div class="card">';
+                echo '<div class="card-body">';
+                echo '<h5 class="card-title">' . $place['p_name'] . '</h5>';
+                echo '<p class="card-text">' . $place['type'] . '</p>';
+                //echo "<img class='img-fluid' src='" . Config::$root_url . '/image/' . $place['Image'] . "' alt='" . $place['Image'] . "'/>";
+                echo '<p class="card-text">' . $place['p_address'] . '</p>';
+                echo '<p class="card-text">' . $place['employees'] . '</p>';
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
+            }
+        }
+        ?>
         <!-- Your main content goes here -->
     </div>
 </div>
