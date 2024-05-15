@@ -1,6 +1,7 @@
 <?php
 
-use Helpers\Helper;
+use Core\Helper;
+use Config\Config;
 
  include "partials/head.php" ?>
 <div class="cont">
@@ -34,6 +35,24 @@ use Helpers\Helper;
     <div class="main-content">
         <div class="container py-5">
             <div class="row listing">
+                <?php
+                if(!empty($places)){
+                    foreach($places as $place){
+                        echo '<div class="col-lg-4 col-md-6 col-sm-12">';
+                        echo '<div class="card">';
+                        echo '<div class="card-body">';
+                        echo '<h5 class="card-title">'.$place['Name'].'</h5>';
+                        echo '<p class="card-text">'.$place['Type'].'</p>';
+                        echo "<img class='img-fluid' src='".Config::$root_url.'/image/'.$place['Image']."' alt='".$place['Image']."'/>";
+                        echo '<p class="card-text">'.$place['Description'].'</p>';
+                        echo '<p class="card-text">'.$place['isFree'].'</p>';
+                        echo '<a href="'.Helper::url("/details/place/{$place['ID']}").'"><button>See more...</button></a>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
+                    }
+                }
+                ?>
             </div>
         </div>
     </div>

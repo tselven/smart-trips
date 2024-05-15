@@ -31,10 +31,25 @@
         </div>
         <button class="apply-filter">Apply Filter</button>
     </div>
-    <div class="main-content" style="padding:0">
+    <div class="main-content" style="padding:20px">
     <?php
-
-    ?>
+    use Config\Config;
+                if(!empty($articles)){
+                    foreach($articles as $article){
+                        echo '<div class="col-lg-4 col-md-6 col-sm-12">';
+                        echo '<div class="card">';
+                        echo '<div class="card-body">';
+                        echo '<h5 class="card-title">'.$article['title'].'</h5>';
+                        echo '<p class="card-text">'.$article['content'].'</p>';
+                        //echo "<img class='img-fluid' src='".Config::$root_url.'/image/'.$place['Image']."' alt='".$place['Image']."'/>";
+                        //echo '<p class="card-text">'.$place[''].'</p>';
+                        echo '<p class="card-text">'.$article['author'].'</p>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
+                    }
+                }
+                ?>
 <!--         <div class="tabs-cont">
             <div class="tabs">
                 <button class="tab-links" onclick="openTab(event, 'tab1')">Tab 1</button>

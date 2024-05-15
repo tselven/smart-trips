@@ -7,7 +7,7 @@
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="http://localhost:8080/image/kks_beach.jpg" alt="Product Image 1">
+                            <img src="<?= $image ?>" alt="Product Image 1">
                             <div class="custom-swiper-button-prev"><</div>
                             <div class="custom-swiper-button-next">></div>
                         </div>
@@ -27,10 +27,10 @@
             </div>
             
             <div class="custom-product-info">
-                <h1 class="custom-product-title"><?php echo $name ?></h1>
+                <h1 class="custom-product-title"><?= $name ?></h1>
                 <b><?php  ?></b>
-                <p class="custom-product-price"><?php echo $price  ?></p>
-                <p class="custom-product-description"><?php echo $description ?></p>
+                <p class="custom-product-price"><?= $price  ?></p>
+                <p class="custom-product-description"><?= $description ?></p>
                 <a href="#" class="custom-buy-now-button">Buy Now</a>
             </div>
         </div>

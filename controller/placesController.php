@@ -1,8 +1,8 @@
 <?php
 
-use Modules\Controller;
+use Core\Controller;
 use Config\Config;
-use Modal\Place;
+use Models\Place;
 
 class Places extends Controller
 {

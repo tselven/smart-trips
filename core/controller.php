@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules;
+namespace Core;
 
 use Config\Config;
 //use Modules\view;

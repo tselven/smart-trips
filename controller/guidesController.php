@@ -1,6 +1,6 @@
 <?php
-use Modules\Controller;
-use Modal\Guides as GuideModel;
+use Core\Controller;
+use Models\Guides as GuideModel;
 
 class Guides extends Controller{
     // TODO: Get all items

@@ -1,5 +1,5 @@
 <?php
-use Modules\Controller;
+use Core\Controller;
 
 class Web extends Controller{
     function index(){
@@ -10,10 +10,5 @@ class Web extends Controller{
         ];
         $view = "Web/index";
         $this->View($view, $data);
-    }
-
-    function test(){
-        $data['name'] = $_GET['name'];
-        $this->View('Frontend/text',$data);
     }
 }

@@ -1,6 +1,6 @@
 <?php include "partials/head.php" ?>
 <?php
-use Helpers\Helper; ?>
+use Core\Helper; ?>
 <?php include "partials/aside.php" ?>
 <!-- Main Content -->
 <div class="main-content">
@@ -8,7 +8,7 @@ use Helpers\Helper; ?>
     <div class="col-12">
       <div class="card">
         <div class="card-header" style="display:flex;justify-content:space-between">
-          <h4><b class="btn btn-success"><i class="bi bi-plus"></i>Add Partner</b></h4>
+          <a href="<?php Helper::route('/dashboard/add/guides') ?>"><h4><b class="btn btn-success"><i class="bi bi-plus"></i>Add Guide</b></h4></a>
           <div class="card-header-form">
             <form>
               <div class="input-group">

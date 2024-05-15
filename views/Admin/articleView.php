@@ -1,7 +1,7 @@
 <?php include "partials/head.php" ?>
 <?php
 
-use Helpers\Helper; ?>
+use Core\Helper; ?>
 <?php include "partials/aside.php" ?>
 <!-- Main Content -->
 <div class="main-content">
@@ -9,7 +9,7 @@ use Helpers\Helper; ?>
     <div class="col-12">
       <div class="card">
         <div class="card-header" style="display:flex;justify-content:space-between">
-          <h4><b class="btn btn-success"><i class="bi bi-plus"></i>Add Partner</b></h4>
+          <a href="<?php Helper::route('/dashboard/add/articles') ?>"><h4><b class="btn btn-success"><i class="bi bi-plus"></i>Add Article</b></h4></a>
           <div class="card-header-form">
             <form>
               <div class="input-group">
@@ -60,6 +60,8 @@ use Helpers\Helper; ?>
                   echo '<td><a href="#" class="btn btn-outline-danger">Delete</a></td>';
                   echo "</tr>";
                 }
+              }else{
+                echo "<tr><td colspan='8'><h4>You have no articles</h4></td></tr>";
               }
               ?>
             </table>

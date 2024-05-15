@@ -1,7 +1,7 @@
 <?php 
-use Helpers\Helper;
+use Core\Helper;
 use Config\Config;
-use Modules\Controller;
+use Core\Controller;
 $head = Config::$root_path."/views/Frontend/partials/head.php";
 $foot = Config::$root_path."/views/Frontend/partials/footer.php";
 include $head; 

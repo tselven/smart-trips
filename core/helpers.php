@@ -1,5 +1,5 @@
 <?php
-namespace Helpers;
+namespace Core;
 use Config\Config;
 
 class Helper{

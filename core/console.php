@@ -1,5 +1,5 @@
 <?php
-namespace Modules;
+namespace Core;
 
 class Console {
     public static function log($message) {
