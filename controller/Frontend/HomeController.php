@@ -1,8 +1,8 @@
 <?php
-use Modules\Controller;
-use Modal\Place;
-use Modal\Articles;
-use Modal\Partners;
+use Core\Controller;
+use Models\Place;
+use Models\Articles;
+use Models\Partners;
 
 class Home extends Controller{
     function index(){

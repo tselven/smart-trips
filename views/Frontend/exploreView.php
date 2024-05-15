@@ -1,6 +1,6 @@
 <?php
 
-use Helpers\Helper;
+use Core\Helper;
 use Config\Config;
 
  include "partials/head.php" ?>
@@ -46,6 +46,7 @@ use Config\Config;
                         echo "<img class='img-fluid' src='".Config::$root_url.'/image/'.$place['Image']."' alt='".$place['Image']."'/>";
                         echo '<p class="card-text">'.$place['Description'].'</p>';
                         echo '<p class="card-text">'.$place['isFree'].'</p>';
+                        echo '<a href="'.Helper::url("/details/place/{$place['ID']}").'"><button>See more...</button></a>';
                         echo '</div>';
                         echo '</div>';
                         echo '</div>';

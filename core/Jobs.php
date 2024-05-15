@@ -1,5 +1,5 @@
 <?php
-namespace Modules;
+namespace Core;
 
 class Jobs {
     function load_jobs(){

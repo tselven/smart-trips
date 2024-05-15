@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php use Helpers\Helper; ?>
+<?php use Core\Helper; ?>
 
 <!-- auth-login.html  21 Nov 2019 03:49:32 GMT -->
 <head>

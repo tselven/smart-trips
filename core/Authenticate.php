@@ -1,8 +1,6 @@
 <?php
-
-namespace Modules;
-
-use Modal\User;
+namespace Core;
+use Models\User;
 
 class Authenticate
 {

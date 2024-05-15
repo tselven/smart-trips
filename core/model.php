@@ -1,6 +1,6 @@
 <?php
 
-namespace Includes;
+namespace Core;
 
 use Config\Config;
 

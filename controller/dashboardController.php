@@ -1,11 +1,11 @@
 <?php
 
-use Modal\User;
-use Modal\Partners;
-use Modal\Articles;
-use Modal\Guides;
-use Modules\Authenticate;
-use Modules\Controller;
+use Models\User;
+use Models\Partners;
+use Models\Articles;
+use Models\Guides;
+use Core\Authenticate;
+use Core\Controller;
 
 class Dashboard extends Controller{
     
@@ -41,6 +41,11 @@ class Dashboard extends Controller{
         $this->View('Admin/partner',$data);
     }
 
+    function add_partners(){
+        $data['title'] = "Add Partners";
+        $this->View('Admin/add_partner',$data);
+    }
+
     function guides(){
         $guide = new Guides();
         $guides = $guide->getAll();
@@ -49,6 +54,11 @@ class Dashboard extends Controller{
             "guides" => $guides
         ];
         $this->View('Admin/guide',$data);
+    }
+
+    function add_guides(){
+        $data['title'] = "Add Guides";
+        $this->View('Admin/add_guide',$data);
     }
 
     function articles(){
@@ -68,7 +78,10 @@ class Dashboard extends Controller{
         ];
         $this->View('Admin/article',$data);
     }
-
+    function add_articles(){
+        $data['title'] = "Add Articles";
+        $this->View('Admin/add_article',$data);
+    }
     function profile(){
         $obj = new User();
         $user = $obj->select('*')->where("username = '{$_SESSION['user']}'")->get();

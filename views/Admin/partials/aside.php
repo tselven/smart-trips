@@ -1,6 +1,6 @@
       <?php
 
-      use Helpers\Helper; ?>
+      use Core\Helper; ?>
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
@@ -69,8 +69,9 @@
             ?>
             <?php
             if ($type == "Admin") {
+              $url = Helper::url('/dashboard/siteSettings');
               $temp = <<<EOT
-              <li><a class="nav-link" href="blank.html"><i data-feather="file"></i><span>Site Settings</span></a></li>
+              <li><a class="nav-link" href="{$url}"><i data-feather="file"></i><span>Site Settings</span></a></li>
               EOT;
               echo $temp;
             }

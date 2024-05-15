@@ -1,6 +1,5 @@
 <?php
-use Modules\Controller;
-use Helpers\Helper;
+use Core\Controller;
 class Admin extends Controller{
 
     function login(){

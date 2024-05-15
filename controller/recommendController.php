@@ -1,5 +1,5 @@
 <?php 
-use Modules\Controller;
+use Core\Controller;
 
 class Recommend extends Controller{
     public function grtRecommend(array $Data):array{

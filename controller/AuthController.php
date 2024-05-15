@@ -1,8 +1,8 @@
 <?php
 
-use Modules\Controller;
-use Modal\User;
-use Helpers\Helper;
+use Core\Controller;
+use Models\User;
+use Core\Helper;
 
 class Auth extends Controller
 {

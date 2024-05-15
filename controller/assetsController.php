@@ -1,8 +1,8 @@
 <?php
 
-use Modules\Controller;
+use Core\Controller;
 use Config\Config;
-use Modules\Media;
+use Core\Media;
 
 class assets extends Controller
 {

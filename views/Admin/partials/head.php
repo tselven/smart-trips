@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- index.html  21 Nov 2019 03:44:50 GMT -->
-<?php use Helpers\Helper; ?>
+<?php use Core\Helper; ?>
 <?php
-    use Modules\Authenticate;
+    use Core\Authenticate;
   if(isset($_SESSION['user'])){
     $auth = new Authenticate();
     $type = $auth->getUser($_SESSION['user']);

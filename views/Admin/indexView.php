@@ -1,5 +1,5 @@
 <?php include "partials/head.php" ?>
-<?php use Helpers\Helper; ?>
+<?php use Core\Helper; ?>
       <?php include "partials/aside.php" ?>
       <!-- Main Content -->
       <div class="main-content">

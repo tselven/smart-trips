@@ -1,8 +1,6 @@
 <?php
-
-namespace Modal;
-
-use Includes\Model;
+namespace Models;
+use Core\Model;
 
 class Place extends Model
 {

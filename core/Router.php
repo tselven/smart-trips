@@ -1,19 +1,28 @@
 <?php
 
-namespace Modules;
+namespace Core;
 use Config\Config;
-use Modules\Controller;
+use Core\Controller;
 
 class Router
 {
     public $routes = array();
-    //public $dRoutes = array();
     public $dRoutes = [
         "/src/|2"          =>     "assets@Files",
         "/video/|1"        =>     "assets@Video",
         "/audio/|1"        =>     "assets@Audio",
         "/image/|1"        =>     "assets@Img",
     ];
+
+    public static function get($url,$controller){
+        $routes[$url] = $controller;
+    }
+    public static function post(){
+
+    }
+    public static function put(){
+
+    }
     protected $status;
     function route($uri)
     {
@@ -79,12 +88,18 @@ class Router
                 $split = explode('-', $str);
                 $controller = explode('-', $controller)[1];
                 $path = Config::$root_path . "/controller/" . $split[0] . "/" . $controller . "Controller.php";
-                echo $path . "<br>";
             }
-            $path = Config::$root_path . "/controller/" . $controller . "Controller.php";
+            else{
+                $path = Config::$root_path . "/controller/" . $controller . "Controller.php";
+            }
             if (file_exists($path)) {
                 include $path;
                 if (class_exists($controller)) {
+                    if(str_contains('/',$controller)){
+                        $parts = explode('/',$controller);
+                        $last = count($parts)-1;
+                        $controller = $parts[$last];
+                    }
                     $route = new $controller();
                     $route->$action();
                 } else {

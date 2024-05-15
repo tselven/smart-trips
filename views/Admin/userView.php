@@ -1,7 +1,7 @@
 <?php include "partials/head.php" ?>
 <?php
 
-use Helpers\Helper; ?>
+use Core\Helper; ?>
 <?php include "partials/aside.php" ?>
 <!-- Main Content -->
 <div class="main-content">

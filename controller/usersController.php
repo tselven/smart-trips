@@ -1,6 +1,6 @@
 <?php
-use Modules\Controller;
-use Modal\User as ModalUsers;
+use Core\Controller;
+use Models\User as ModalUsers;
 
 class Users extends Controller{
     function GET(){

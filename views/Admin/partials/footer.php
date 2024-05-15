@@ -1,4 +1,4 @@
-<?php use Helpers\Helper; ?>
+<?php use Core\Helper; ?>
   <!-- General JS Scripts -->
   <script src="<?php Helper::route('/src/js/app.min.js') ?>"></script>
   <!-- JS Libraies -->

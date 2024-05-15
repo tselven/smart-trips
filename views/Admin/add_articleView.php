@@ -5,9 +5,9 @@ use Core\Helper; ?>
 <?php include "partials/aside.php" ?>
 <!-- Main Content -->
 <div class="main-content">
-  <div class="card">
+  <form action="<?php Helper::route('/add/article') ?>" method="POST" class="card">
     <div class="card-header">
-      <h4>Add New User</h4>
+      <h4>Add New Article</h4>
     </div>
     <div class="card-body">
       <div class="form-group">
@@ -74,6 +74,6 @@ use Core\Helper; ?>
       <button class="btn btn-primary mr-1" type="submit">Submit</button>
       <button class="btn btn-secondary" type="reset">Reset</button>
     </div>
-  </div>
+  </form>
 </div>
 <?php include "partials/footer.php" ?>

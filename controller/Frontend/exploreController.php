@@ -1,6 +1,6 @@
 <?php
-use Modal\Place;
-use Modules\Controller;
+use Models\Place;
+use Core\Controller;
 
 
 class Explore extends Controller{

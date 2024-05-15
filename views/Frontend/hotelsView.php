@@ -34,7 +34,7 @@
     <div class="main-content">
         <?php
 
-        use Config\Config;
+        use Core\Helper;
 
         if (!empty($places)) {
             foreach ($places as $place) {
@@ -46,6 +46,7 @@
                 //echo "<img class='img-fluid' src='" . Config::$root_url . '/image/' . $place['Image'] . "' alt='" . $place['Image'] . "'/>";
                 echo '<p class="card-text">' . $place['p_address'] . '</p>';
                 echo '<p class="card-text">' . $place['employees'] . '</p>';
+                echo '<a href="'.Helper::url("/details/partners/{$place['partner_id']}").'"><button>See more...</button></a>';
                 echo '</div>';
                 echo '</div>';
                 echo '</div>';

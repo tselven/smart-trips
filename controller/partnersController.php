@@ -1,6 +1,6 @@
 <?php
-use Modules\Controller;
-use Modal\Partners as PartnerModel;
+use Core\Controller;
+use Models\Partners as PartnerModel;
 class partners extends Controller{
     // TODO: Get all items
     function GET(){
