@@ -91,4 +91,9 @@ class Dashboard extends Controller{
         ];
         $this->View('Admin/profile',$data);
     }
+
+    function site_settings(){
+        $data['title'] = "Site Settings";
+        $this->View('Admin/settings',$data);
+    }
 }

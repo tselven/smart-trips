@@ -15,7 +15,23 @@ class Helper{
         return Config::$root_url.$path;
     }
 
-    
+    public static function load_env($file_path = '.env') {
+        $env_vars = [];
+        if (file_exists($file_path)) {
+            $lines = file($file_path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+            foreach ($lines as $line) {
+                if (strpos(trim($line), '#') !== 0) {
+                    list($key, $value) = explode('=', $line, 2);
+                    $env_vars[trim($key)] = trim($value);
+                }
+            }
+            // Merge loaded variables with $_ENV
+            $_ENV = array_merge($_ENV, $env_vars);
+        } else {
+            return '.env file not found.';
+        }
+        return $env_vars;
+    }
 }
 
 function url($path){

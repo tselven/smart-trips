@@ -53,3 +53,7 @@ class Config
     }
 }
 Config::init();
+use Core\Helper;
+Helper::load_env();
+// Example usage:
+//$env_variables = load_env();
