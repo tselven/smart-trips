@@ -5,75 +5,65 @@ use Core\Helper; ?>
 <?php include "partials/aside.php" ?>
 <!-- Main Content -->
 <div class="main-content">
-  <div class="card">
+  <form action="/dashboard/add/guides" class="card">
     <div class="card-header">
-      <h4>Add New User</h4>
+      <h4>Add New Guide</h4>
     </div>
     <div class="card-body">
-      <div class="form-group">
-        <label>Text</label>
-        <input type="text" class="form-control">
+      <div class="row">
+      <div class="form-group col-6">
+        <label>First Name</label>
+        <input type="text" name="fname" class="form-control">
       </div>
-      <div class="form-group">
-        <label>Select</label>
-        <select class="form-control">
-          <option>Option 1</option>
-          <option>Option 2</option>
-          <option>Option 3</option>
-        </select>
+      <div class="form-group col-6">
+        <label>Last Name</label>
+        <input type="text" name="lname" class="form-control">
       </div>
+</div>
       <div class="form-group">
-        <label>Email</label>
-        <input type="email" class="form-control">
-      </div>
-      <div class="form-group">
-        <label>File</label>
-        <input type="file" class="form-control">
+        <label>Username</label>
+        <input type="text" class="form-control"/>
       </div>
       <div class="form-group">
         <label>Password</label>
         <input type="password" class="form-control">
       </div>
       <div class="form-group">
-        <label class="d-block">Radio</label>
+        <label>Email</label>
+        <input type="email" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Profile Photo</label>
+        <input type="file" class="form-control">
+      </div>
+      <div class="form-group">
+        <label class="d-block">Gender</label>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" checked>
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1">
           <label class="form-check-label" for="exampleRadios1">
-            Radio 1
+            Male
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" checked>
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2">
           <label class="form-check-label" for="exampleRadios2">
-            Radio 2
+            Female
           </label>
         </div>
       </div>
       <div class="form-group">
-        <label>Search</label>
-        <input type="search" class="form-control">
+        <label>Address</label>
+        <input type="text" class="form-control">
       </div>
       <div class="form-group">
-        <label>Tel</label>
+        <label>Telephone</label>
         <input type="tel" class="form-control">
-      </div>
-      <div class="form-group">
-        <label>Time</label>
-        <input type="time" class="form-control">
-      </div>
-      <div class="form-group">
-        <label>Url</label>
-        <input type="url" class="form-control">
-      </div>
-      <div class="form-group mb-0">
-        <label>Week</label>
-        <input type="week" class="form-control">
       </div>
     </div>
     <div class="card-footer text-right">
       <button class="btn btn-primary mr-1" type="submit">Submit</button>
       <button class="btn btn-secondary" type="reset">Reset</button>
     </div>
-  </div>
+  </form>
 </div>
 <?php include "partials/footer.php" ?>
